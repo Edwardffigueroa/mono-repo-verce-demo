@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const { createServer } = require("http");
+const cors = require("cors");
 
 const usersRouter = require("./server/routes/users.router");
 const screen1EventsRouter = require("./server/routes/screen1Events.router");
@@ -10,6 +11,9 @@ const PORT = process.env.PORT || 5050;
 
 const app = express();
 const httpServer = createServer(app);
+
+// CORS configuration
+app.use(cors());
 
 // Middlewares
 app.use(express.json());
