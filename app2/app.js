@@ -1,7 +1,7 @@
 import renderScreen1 from "./screens/screen1.js";
 import renderScreen2 from "./screens/screen2.js";
 
-const socket = io("/", { path: "/real-time" });
+const socket = io("https://myapp-backend-six.vercel.app", { path: "/real-time" });
 
 function clearScripts() {
   document.getElementById("app").innerHTML = "";

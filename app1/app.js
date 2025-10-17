@@ -1,6 +1,6 @@
 import renderScreen1 from "./screens/screen1.js";
 
-const socket = io("/", { path: "/real-time" });
+const socket = io("https://myapp-backend-six.vercel.app", { path: "/real-time" });
 
 function clearScripts() {
   document.getElementById("app").innerHTML = "";
@@ -23,7 +23,7 @@ function navigateTo(path, data) {
 }
 
 async function makeRequest(url, method, body) {
-  const BASE_URL = "http://localhost:5050";
+  const BASE_URL = "https://myapp-backend-six.vercel.app";
   let response = await fetch(`${BASE_URL}${url}`, {
     method: method,
     headers: {
