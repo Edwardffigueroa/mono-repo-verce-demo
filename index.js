@@ -25,7 +25,7 @@ app.use("/", usersRouter);
 app.use("/", screen1EventsRouter);
 
 // Services
-initSocketInstance(httpServer);
+initSocketInstance();
 
 httpServer.listen(PORT, () =>
   console.log(`Server running at http://localhost:${PORT}`)
